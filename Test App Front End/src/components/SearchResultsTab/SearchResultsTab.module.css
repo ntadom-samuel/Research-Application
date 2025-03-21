@@ -1,0 +1,9 @@
+.searchBar {
+  width: 100%;
+  margin-bottom: 1.6rem;
+}
+
+.professorList {
+  list-style-type: none;
+  display: over;
+}
