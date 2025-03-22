@@ -33,6 +33,6 @@ const professorSchema = new mongoose.Schema(
   }
 );
 
-const Professor = mongoose.model("Professor", studentSchema);
+const Professor = mongoose.model("Professor", professorSchema);
 
 module.exports = Professor;

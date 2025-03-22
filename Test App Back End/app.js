@@ -1,5 +1,6 @@
 const express = require("express"); //importing the express module
 const studentRouter = require("./routes/studentRoute");
+const professorRouter = require("./routes/professorRoute");
 const cors = require("cors");
 
 const app = express(); //creating object for performing requests
@@ -17,7 +18,8 @@ app.use(express.json()); //allows us to access req.body
 
 //Hook for creating a students profile
 app.use("/api/student", studentRouter);
+
 //Hook for creating a professors profile
-// app.use("/api/professor", professorRouter);
+app.use("/api/professor", professorRouter);
 
 module.exports = app;
