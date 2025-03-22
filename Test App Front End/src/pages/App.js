@@ -1,16 +1,14 @@
 import { useEffect, useState } from "react";
-import Login from "./components/Login/Login";
-import UserInputFields from "./components/UserInputFields/UserInputFields";
-import Selector from "./components/Selector/Selector";
-import Description from "./components/Description";
+import Login from "../components/Login/Login";
+import UserInputFields from "../components/UserInputFields/UserInputFields";
+import Selector from "../components/Selector/Selector";
+import Description from "../components/Description";
 import { Button } from "@chakra-ui/react";
-import Navigation from "./components/Navigation/Navigation";
-import MainProfile from "./components/MainProfile/MainProfile";
-import SearchResultsTab from "./components/SearchResultsTab/SearchResultsTab";
-import DegreeFields from "./components/DegreeFields/DegreeFields";
-import { Provider } from "./components/ui/provider";
+import Navigation from "../components/Navigation/Navigation";
+import MainProfile from "../components/MainProfile/MainProfile";
+import SearchResultsTab from "../components/SearchResultsTab/SearchResultsTab";
+import DegreeFields from "../components/DegreeFields/DegreeFields";
 //TODO: users will be able to select multiple filters in the search section
-// Research Team typing
 const fields = ["Computer Science", "Economics", "Physics", "Math"]; //for now, these are the possible fields a user can choose from
 const filter = ["Region", "Institution", "Professor's Name"];
 
@@ -123,7 +121,7 @@ function App({ Component, pageProps }) {
   );
 
   return (
-    <Provider>
+    <>
       <Navigation
         isLoggedIn={isLoggedIn}
         isStudent={isStudent}
@@ -193,7 +191,7 @@ function App({ Component, pageProps }) {
           </>
         )}
       </main>
-    </Provider>
+      </>
   );
 }
 
