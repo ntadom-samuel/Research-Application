@@ -10,7 +10,7 @@ import SearchResultsTab from "./components/SearchResultsTab/SearchResultsTab";
 import DegreeFields from "./components/DegreeFields/DegreeFields";
 import { Provider } from "./components/ui/provider";
 //TODO: users will be able to select multiple filters in the search section
-
+// Research Team typing
 const fields = ["Computer Science", "Economics", "Physics", "Math"]; //for now, these are the possible fields a user can choose from
 const filter = ["Region", "Institution", "Professor's Name"];
 
