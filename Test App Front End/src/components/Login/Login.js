@@ -1,5 +1,10 @@
+import styles from "./Login.module.css";
 function Login({ children, onSubmit }) {
-  return <form onSubmit={onSubmit}>{children}</form>;
+  return (
+    <form className={styles.container} onSubmit={onSubmit}>
+      {children}
+    </form>
+  );
 }
 
 export default Login;

@@ -1,18 +1,22 @@
 import styles from "./Nagvigation.module.css";
+import { Button } from "@chakra-ui/react";
+import { Avatar, For, HStack } from "@chakra-ui/react";
 
 function Navigation({ isLoggedIn, isStudent, setIsStudent }) {
+  //Event Handler
   function handleSelectUser(e) {
-    if (e.target.textContent === "student") {
+    if (e.target.className.includes("student")) {
       setIsStudent(true);
     }
-    if (e.target.textContent === "professor") {
+    if (e.target.className.includes("professor")) {
       setIsStudent(false);
     }
   }
+
   return (
     <nav
       className={`${styles.navigation} ${
-        isLoggedIn ? styles.navigation_logged_in : styles.navigation_logged_out
+        !isLoggedIn ? styles.navigation_logged_out : ""
       }`}
     >
       {!isLoggedIn && (
@@ -21,24 +25,18 @@ function Navigation({ isLoggedIn, isStudent, setIsStudent }) {
             onClick={handleSelectUser}
             className={`${isStudent ? `${styles.active_nav_link}` : ""} ${
               styles.nav_links
-            }`}
+            } student`}
           >
-            student
+            Student
           </li>
           <li
             onClick={handleSelectUser}
             className={`${!isStudent ? `${styles.active_nav_link}` : ""} ${
               styles.nav_links
-            }`}
+            } professor`}
           >
-            professor
+            Researcher
           </li>
-        </ul>
-      )}
-      {isLoggedIn && (
-        <ul>
-          <li className={styles.profile_button}>Me</li>
-          <li className={styles.nav_links}>Main List</li>
         </ul>
       )}
     </nav>

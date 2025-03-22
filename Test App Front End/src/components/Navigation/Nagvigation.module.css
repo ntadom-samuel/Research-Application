@@ -15,23 +15,14 @@
   font-size: 1.6rem;
 }
 
-.navigation_logged_in {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  background-color: green;
-}
-
 .navigation_logged_out {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   /*Note: only children of the grid display can use justif-self */
   justify-content: space-between;
   align-items: center;
-  background-color: red;
 }
 
-.navigation_logged_in ul,
 .navigation_logged_out ul {
   display: flex;
 
@@ -40,26 +31,17 @@
   list-style-type: none;
 }
 
-.navigation_logged_in ul:nth-child(2),
-.navigation_logged_out ul:nth-child(2) {
-  justify-content: flex-end;
-}
-
-.profile_button {
-  padding: 0.8rem 0.8rem;
-  border-radius: 100%;
-  background-color: blue;
-}
-
-.nav_links,
-.nav_links:hover {
+.nav_links {
   padding: 0.8rem 1.6rem;
+  border-radius: 0.5rem;
 }
-.nav_links:hover {
-  box-shadow: inset 0 0 0 1px #e7f5f772;
-  transition: all 0.5s;
+
+.inactive_nav_link {
+  box-shadow: inset 0 0 0 1px #e5dbff;
 }
 
 .active_nav_link {
-  box-shadow: inset 0 0 0 1px #e7f5f7;
+  background-color: #2e1d608b;
+
+  color: #f6f3ff;
 }

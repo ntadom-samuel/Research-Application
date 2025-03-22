@@ -1,4 +1,5 @@
 import { useState } from "react";
+import styles from "./Selector.module.css";
 
 function Selector({ text, array }) {
   //States
@@ -11,9 +12,13 @@ function Selector({ text, array }) {
   }
 
   return (
-    <div>
+    <div className={styles.container}>
       <p>{text}</p>
-      <select value={selectedValue} onChange={handleSelect}>
+      <select
+        className={styles.entry}
+        value={selectedValue}
+        onChange={handleSelect}
+      >
         {array.map((val) => (
           <option key={val} value={val}>
             {val}

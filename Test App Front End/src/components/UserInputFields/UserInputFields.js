@@ -15,6 +15,7 @@ function UserInputFields({
         type="text"
         value={firstText}
         placeholder={options[0]}
+        className={styles.entry}
         onChange={(e) => {
           e.preventDefault();
           setFirstText(e.target.value);
@@ -23,6 +24,7 @@ function UserInputFields({
       <input
         type="text"
         value={secondText}
+        className={styles.entry}
         placeholder={options[1]}
         onChange={(e) => {
           e.preventDefault();

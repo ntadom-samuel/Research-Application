@@ -1,6 +1,6 @@
 import InformationUnit from "../InformationUnit/InformationUnit";
 import styles from "./MainProfile.module.css";
-import Button from "../Button";
+import Button from "../Button/Button";
 import { useEffect, useState } from "react";
 import { hasFormSubmit } from "@testing-library/user-event/dist/utils";
 //This component handles rendering a users data to the UI when they are logged in
